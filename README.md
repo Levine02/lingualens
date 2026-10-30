@@ -20,7 +20,7 @@
 
 **[点击下载可直接拖拽安装的 ZIP](https://github.com/Levine02/lingualens/releases/download/v1.0.0/lingualens-1.0.0-chrome.zip)**
 
-GitHub 仓库和安装包公开可下载。GitLab 仓库需要登录有访问权限的账号，并能够访问 `git.garena.com`。
+GitHub 仓库和安装包公开可下载。
 
 ## 2. 添加到 Chrome
 
