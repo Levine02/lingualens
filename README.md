@@ -17,7 +17,6 @@
 | 平台 | 仓库 | 下载方式 |
 | --- | --- | --- |
 | GitHub（推荐） | [Levine02/lingualens](https://github.com/Levine02/lingualens) | 打开 [Releases](https://github.com/Levine02/lingualens/releases)，在 `v1.0.0` 的 Assets 中下载 **`lingualens-1.0.0-chrome.zip`** |
-| GitLab（源码） | [wen.li/lingualens](https://git.garena.com/wen.li/lingualens) | 在仓库首页找到 **Download source code / 下载源码**，选择 **zip**，按下方备用方式解压加载 |
 
 **[点击下载可直接拖拽安装的 ZIP](https://github.com/Levine02/lingualens/releases/download/v1.0.0/lingualens-1.0.0-chrome.zip)**
 
