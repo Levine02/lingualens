@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "LinguaLens · 划词词典与 AI 翻译",
+  "version": "1.0.0",
+  "description": "选中英文单词立即显示音标、发音与中文释义；选中句子调用 LLM 翻译成流畅中文。",
+  "permissions": ["storage", "contextMenus", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://api.dictionaryapi.dev/*",
+    "https://dict.youdao.com/*",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service_worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "LinguaLens · 划词词典与 AI 翻译",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_new_tab": true
+  },
+  "commands": {
+    "translate-selection": {
+      "suggested_key": { "default": "Alt+Q" },
+      "description": "翻译当前选中的文本"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

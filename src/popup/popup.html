@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>LinguaLens</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">L</div>
+    <div class="title">
+      <strong>LinguaLens</strong>
+      <span id="ver">v1.0.0</span>
+    </div>
+    <label class="switch" title="启用 / 暂停">
+      <input type="checkbox" id="enabled" />
+      <span></span>
+    </label>
+  </header>
+
+  <div class="body">
+    <div class="card" id="dictCard">
+      <div class="dot ok"></div>
+      <div>
+        <b>词典（音标 / 发音 / 中文释义）</b>
+        <p>免费数据源，开箱即用，无需配置</p>
+      </div>
+    </div>
+
+    <div class="card" id="llmCard">
+      <div class="dot" id="llmDot"></div>
+      <div>
+        <b>AI 句子翻译</b>
+        <p id="llmState">未配置</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="btn-translate" class="btn primary">翻译当前选区</button>
+      <button id="btn-options" class="btn">打开设置</button>
+    </div>
+
+    <ul class="hints">
+      <li><code>Alt + Q</code> 翻译选中文本</li>
+      <li><code>双击</code> 单词 → 词典卡片</li>
+      <li>关闭自动弹窗后：<code>Alt</code> + 松开鼠标</li>
+    </ul>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
