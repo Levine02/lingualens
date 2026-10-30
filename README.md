@@ -154,20 +154,6 @@ API Key 是模型服务商发给你的调用凭证。免费模型也需要自己
 - 扩展需要在网页中检测选区、显示浮层，也需要访问你填写的模型接口，因此声明了 HTTP / HTTPS 网站访问权限。
 - 当前代码不包含开发者自建的文本收集或统计服务。请只配置你信任的服务商和网关。
 
-## 9. 开发与自检
-
-插件采用 Chrome Manifest V3，源码可直接加载；普通用户无需运行以下命令。
-
-```bash
-# 检查 manifest、HTML、JS 引用路径与内联脚本 CSP
-python3 tools/check.py
-
-# 开发者可选：安装测试依赖并运行现有 UI 冒烟测试
-npm install --no-save --package-lock=false jsdom
-node tools/ui_smoke.mjs
-```
-
-目录结构、消息流程和实现说明见 [开发说明](docs/DEVELOPMENT.md)。
 
 安装步骤参考 [Chrome 官方：加载已解压的扩展程序](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)。
 
