@@ -65,3 +65,14 @@ python3 icons/generate_icons.py
 `tools/ui_smoke.mjs` 使用模拟 Chrome API，覆盖单词卡片、句子翻译触发、未收录词兜底、浮层去重和 Esc 关闭。它不验证真实浏览器扩展权限或真实模型 API 的可用性。
 
 发布时应排除 `node_modules`、本地密钥、日志和生成的压缩包。API Key 由用户在浏览器中填写，不应提交到仓库。
+
+## 生成可拖拽安装的 ZIP
+
+`manifest.json` 必须位于 ZIP 根目录，不能额外添加项目目录前缀：
+
+```bash
+mkdir -p dist
+git archive --format=zip --output=dist/lingualens-1.0.0-chrome.zip v1.0.0 manifest.json src icons
+```
+
+这个安装包只包含扩展运行目录和图标目录。GitHub / GitLab 自动生成的源码 ZIP 会带项目目录前缀，应保留为手动解压加载方式，不要把它们当作直接拖拽安装包。

@@ -12,38 +12,46 @@
 
 ## 1. 下载插件
 
-任选一个平台下载，**不需要安装 Git、Node.js，也不需要编译**。
+推荐下载 **`lingualens-1.0.0-chrome.zip`**，直接拖进 Chrome 扩展管理页安装，**不需要手动解压、安装 Git 或 Node.js，也不需要编译**。
 
 | 平台 | 仓库 | 下载方式 |
 | --- | --- | --- |
-| GitHub | [Levine02/lingualens](https://github.com/Levine02/lingualens) | 打开 [Releases](https://github.com/Levine02/lingualens/releases)，在 `v1.0.0` 的 Assets 中下载 `lingualens-1.0.0.zip`；也可以在仓库首页点击 **Code → Download ZIP** |
-| GitLab | [wen.li/lingualens](https://git.garena.com/wen.li/lingualens) | 在仓库首页找到 **Download source code / 下载源码**，选择 **zip** |
+| GitHub（推荐） | [Levine02/lingualens](https://github.com/Levine02/lingualens) | 打开 [Releases](https://github.com/Levine02/lingualens/releases)，在 `v1.0.0` 的 Assets 中下载 **`lingualens-1.0.0-chrome.zip`** |
+| GitLab（源码） | [wen.li/lingualens](https://git.garena.com/wen.li/lingualens) | 在仓库首页找到 **Download source code / 下载源码**，选择 **zip**，按下方备用方式解压加载 |
 
-也可以直接下载：[GitHub v1.0.0 安装包](https://github.com/Levine02/lingualens/releases/download/v1.0.0/lingualens-1.0.0.zip) · [GitHub main 分支源码](https://github.com/Levine02/lingualens/archive/refs/heads/main.zip) · [GitLab main 分支源码](https://git.garena.com/wen.li/lingualens/-/archive/main/lingualens-main.zip)。
+**[点击下载可直接拖拽安装的 ZIP](https://github.com/Levine02/lingualens/releases/download/v1.0.0/lingualens-1.0.0-chrome.zip)**
 
-如果仓库是私有仓库，需要先登录有访问权限的账号。GitLab 还需要能够访问 `git.garena.com`。没有权限时，链接可能显示 404，请联系仓库维护者获取访问权限或安装包。
-
-下载后：
-
-1. 将 ZIP **完整解压**。
-2. 把解压后的文件夹放到一个长期保留的位置，例如「文档 / Chrome 扩展 / lingualens」。
-3. 打开文件夹，确认里面直接包含 `manifest.json`、`src` 和 `icons`。文件夹名可能是 `lingualens-1.0.0` 或 `lingualens-main`，不影响安装。
-
-**不要直接选择 ZIP，也不要只下载 `manifest.json`。安装后仍需保留整个文件夹。**
+GitHub 仓库和安装包公开可下载。GitLab 仓库需要登录有访问权限的账号，并能够访问 `git.garena.com`。
 
 ## 2. 添加到 Chrome
 
-1. 在 Chrome 地址栏输入 `chrome://extensions`，按回车。
-2. 打开右上角的 **开发者模式**。
-3. 点击左上角的 **加载已解压的扩展程序**。
-4. 选择上一步解压得到的、**直接包含 `manifest.json` 的文件夹**。
+### 推荐：直接拖拽 ZIP 安装
+
+1. 下载上面的 **`lingualens-1.0.0-chrome.zip`**，不用解压。
+2. 在 Chrome 地址栏输入 `chrome://extensions`，按回车。
+3. 打开右上角的 **开发者模式**。
+4. 从文件管理器（Windows 资源管理器 / macOS Finder）把 ZIP **拖进这个扩展管理页面**，松开鼠标；如出现确认提示，按提示完成安装。
 5. 看到 **LinguaLens · 划词词典与 AI 翻译** 卡片，确认开关处于启用状态。
-6. 点击 Chrome 工具栏的拼图图标，找到 LinguaLens，点击图钉固定到工具栏。
-7. 刷新安装前已经打开的普通网页，然后选中一个英文单词试试。
+6. 刷新原来已打开的普通网页，选中一个英文单词试试。
+
+Chrome 会自动解压并加载扩展。这里是拖进 `chrome://extensions` 页面，不是双击 ZIP，也不是在「加载已解压的扩展程序」按钮中选择 ZIP。
+
+安装后可点击工具栏的拼图图标，找到 LinguaLens，点击图钉固定到工具栏。
 
 首次安装会自动打开设置页。暂时没有 API Key 也没关系，词典功能可以先用。
 
-> 本文使用「开发者模式 + 加载已解压的扩展程序」安装。若浏览器由单位统一管理且禁止开发者模式，需要联系浏览器管理员。
+### 备用：手动解压加载
+
+如果拖拽安装不可用，或者你下载的是 GitHub **Code → Download ZIP**、GitLab 源码 ZIP、旧的 `lingualens-1.0.0.zip`，使用以下方式：
+
+1. 将 ZIP 完整解压，放到一个长期保留的位置。
+2. 打开 `chrome://extensions` 并开启 **开发者模式**。
+3. 点击 **加载已解压的扩展程序**，选择直接包含 `manifest.json`、`src` 和 `icons` 的文件夹。
+4. 刷新网页。使用这种方式安装后，请保留加载的文件夹。
+
+源码 ZIP 通常多包了一层项目文件夹；专用的 `-chrome.zip` 将 `manifest.json` 放在 ZIP 根目录，因此可以直接拖拽安装。
+
+> 若浏览器由单位统一管理且禁止开发者模式或扩展安装，需要联系浏览器管理员。
 
 ## 3. 没有 API Key？推荐智谱 GLM 免费模型
 
@@ -117,7 +125,8 @@ API Key 是模型服务商发给你的调用凭证。免费模型也需要自己
 
 | 问题 | 处理方式 |
 | --- | --- |
-| 找不到扩展或提示清单文件缺失 | 完整解压 ZIP，并选择直接包含 `manifest.json` 的文件夹；不要选择它的上一级目录或 `src` 子目录 |
+| 拖拽 ZIP 后无法安装或提示清单文件缺失 | 确认下载的是 `lingualens-1.0.0-chrome.zip`，已开启开发者模式，并拖进 `chrome://extensions`；源码 ZIP 请按备用方式解压加载 |
+| 手动加载时提示清单文件缺失 | 选择直接包含 `manifest.json` 的文件夹，不要选择它的上一级目录或 `src` 子目录 |
 | 已安装但划词没有反应 | 刷新网页；检查扩展开关和「选中文本后自动弹出」设置；在普通 HTTP / HTTPS 网页上测试 |
 | 在 `chrome://`、Chrome 应用商店或部分内嵌页面中无效 | 浏览器内部页面和应用商店限制扩展注入；当前版本也不自动注入网页中的 iframe |
 | 单词能查，句子不能翻译 | 词典不依赖 Key，句子翻译依赖模型；检查模型配置是否测试成功并已保存 |
@@ -131,7 +140,9 @@ API Key 是模型服务商发给你的调用凭证。免费模型也需要自己
 
 ## 7. 更新与卸载
 
-**更新：** 下载新版并解压，将内容更新到原来加载的插件文件夹中；打开 `chrome://extensions`，点击 LinguaLens 卡片上的重新加载按钮，再刷新使用插件的网页。保留原加载路径，避免因换目录导致扩展身份或本地设置变化。
+**拖拽安装后的更新：** 下载新版专用 ZIP，按拖拽方式安装新版。不要假定重新拖入 ZIP 会原位更新；如果出现两个 LinguaLens 卡片，确认新版配置可用后移除旧版，避免重复弹窗。重新安装前请妥善保管自己的 API Key。
+
+**手动加载后的更新：** 下载新版并解压，将内容更新到原来加载的插件文件夹中；打开 `chrome://extensions`，点击 LinguaLens 卡片上的重新加载按钮，再刷新网页。保留原加载路径，避免因换目录导致扩展身份或本地设置变化。
 
 **卸载：** 在 `chrome://extensions` 中找到 LinguaLens，点击「移除」。重新安装前请自行妥善保管 API Key。
 
@@ -159,3 +170,5 @@ node tools/ui_smoke.mjs
 目录结构、消息流程和实现说明见 [开发说明](docs/DEVELOPMENT.md)。
 
 安装步骤参考 [Chrome 官方：加载已解压的扩展程序](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)。
+
+ZIP 拖拽安装实现参考 Chromium 的 [拖拽文件处理](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/chrome/browser/extensions/api/developer_private/developer_private_functions.cc) 与 [ZIP 安装器](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/browser/zipfile_installer.cc)。
